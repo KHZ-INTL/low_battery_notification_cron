@@ -4,11 +4,11 @@ It is a bash script that checks the output of "acpi --battery", the battery perc
 ### Example screenshots
 
 #### Low battery warning <26%
-
+![Low Battery Warning <26%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/warning26.png)
 #### Low battery warning <16%
-
+![Low Battery Warning <16%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/warning15.png)
 #### critical battery warning <11%
-
+![Critical Battery Warning <11%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/critical10.png)
 
 
 # Crontab
@@ -25,6 +25,7 @@ Before calling notify-send or at the top of your crontab set the display variabl
 For Cron to be able to access Dbus it needs Dbus address and Xsession cookie(Xauthority)? Thus we need to source them before calling the battery warning script. One method is exporting Dbus address and the Xsession cookie to file on logon using a script.
 
 Thanks to Cas from askubuntu.com for the script:
+
 `#!/bin/bash`
 
 `# Export the dbus session address on startup so it can be used by cron`
