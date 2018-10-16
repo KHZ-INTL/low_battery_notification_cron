@@ -11,10 +11,10 @@ It is a bash script that checks the output of "acpi --battery", the battery perc
 ![Critical Battery Warning <11%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/critical10.png)
 
 ## Dependencies
--dunstify: alternative to notify-send, you can modify code to use notify-send instead. Replace dunstify with notify-send and remve -r option.
--elementary icons: can use other icons, look inside `/usr/share/icons/[PROVIDER]/48/status/`
--acpi: retrieve battery percentage
--cron
+- dunstify: alternative to notify-send, you can modify code to use notify-send instead. Replace dunstify with notify-send and remve -r option.
+- elementary icons: can use other icons, look inside `/usr/share/icons/[PROVIDER]/48/status/`
+- acpi: retrieve battery percentage
+- cron
 
 
 # Crontab
