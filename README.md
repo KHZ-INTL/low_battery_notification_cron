@@ -2,6 +2,7 @@
 It is a bash script that checks the output of "acpi --battery", the battery percentage and if it is less than 26, 16 and 11% then a low/critical warning notifications is sent. The script does not exactly check for thee 25, 15 and 10% as it is invoked every 5 minutes and probably not pass the check. 
 
 ### Example screenshots
+The screenshots are just for example and not taken durring low battery status. Just for graphical representation. The scrip is customisable if you would like to change things.
 
 #### Low battery warning <26%
 ![Low Battery Warning <26%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/warning26.png)
@@ -11,7 +12,7 @@ It is a bash script that checks the output of "acpi --battery", the battery perc
 ![Critical Battery Warning <11%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/critical10.png)
 
 ## Dependencies
-- dunstify: alternative to notify-send, you can modify code to use notify-send instead. Replace dunstify with notify-send and remve -r option.
+- dunstify: alternative to notify-send, you can modify code to use notify-send instead. Replace dunstify with notify-send and remove -r option.
 - elementary icons: can use other icons, look inside `/usr/share/icons/[PROVIDER]/48/status/`
 - acpi: retrieve battery percentage
 - cron
@@ -55,7 +56,7 @@ To be able use the exported information, it needs to be sourced inside crontab, 
 `*/5 * * * * source ~/.dbus/Xdbus; /home/scripts/battery_warning.sh;`
 
 
-#####Notes
+##### Notes
 The accuracy of this document is questionable and there maybe security concerns since the session cookie is exported to a file.
 
 The code is not optimised. Any feed back/contribution is appreciated. 
