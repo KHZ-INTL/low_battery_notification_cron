@@ -53,6 +53,7 @@ Thanks to Cas from askubuntu.com for the script:
 
 
 To be able use the exported information, it needs to be sourced inside crontab, before executing the battery warning script.
+
 `*/5 * * * * source ~/.dbus/Xdbus; /home/scripts/battery_warning.sh;`
 
 
