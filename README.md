@@ -21,7 +21,7 @@ The screenshots are just for example and not taken durring low battery status. J
 # Crontab
 The script does not run in the background as a standalone application. It is invoked by cron every 5 minutes. Thus, you will need a time based scheduler such as Cronie. Please see the <a href="https://wiki.archlinux.org/index.php/Cron">wiki</a> on cron for more details.
 
-### cron and notifications - notify-send
+### cron and notifications - notify-send/dunstify
 For notify-send to be able to send notification it relies on Dbus and correct display variable?.
 
 #### Display variable
