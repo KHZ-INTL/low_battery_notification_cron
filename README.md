@@ -39,7 +39,7 @@ Thanks to Cas from askubuntu.com for the script:
  touch $HOME/.dbus/Xdbus
  chmod 600 $HOME/.dbus/Xdbus
  env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
- eho 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+ echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
  Export XAUTHORITY value on startup so it can be used by cron
  env | grep XAUTHORITY >> $HOME/.dbus/Xdbus
  echo 'export XAUTHORITY' >> $HOME/.dbus/Xdbus
