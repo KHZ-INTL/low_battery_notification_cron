@@ -19,7 +19,7 @@ The screenshots are just for example and not taken durring low battery status. J
 
 
 # Crontab
-The script does not run in the background as a standalone application. It is invoked by cron every 5 minutes. Thus, you will need a time based scheduler such as Cronie. Please see the <a href="https://wiki.archlinux.org/index.php/Cron">wiki</a> on cron for more details.
+The script does not run in the background as a standalone application. It is invoked by cron every 5 minutes. Thus, you will need a time based scheduler such as Cronie. Please see the <a href="https://wiki.archlinux.org/index.php/Cron">wiki</a> on cron for more details. Please visit <a href="https://crontab.guru" target="_blank">Crontab Guru</a> website to interactively generate a crontab schedule.
 
 ### cron and notifications - notify-send/dunstify
 For notify-send to be able to send notification it relies on Dbus and correct display variable?.
@@ -33,24 +33,17 @@ For Cron to be able to access Dbus it needs Dbus address and Xsession cookie(Xau
 
 Thanks to Cas from askubuntu.com for the script:
 
-`#!/bin/bash`
-
-`# Export the dbus session address on startup so it can be used by cron`
-
-`touch $HOME/.dbus/Xdbus`
-
-`chmod 600 $HOME/.dbus/Xdbus`
-
-`env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus`
-
-`echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus`
-
-`# Export XAUTHORITY value on startup so it can be used by cron`
-
-`env | grep XAUTHORITY >> $HOME/.dbus/Xdbus`
-
-`echo 'export XAUTHORITY' >> $HOME/.dbus/Xdbus`
-
+```
+ #!/bin/bash
+ # Export the dbus session address on startup so it can be used by cron
+ touch $HOME/.dbus/Xdbus
+ chmod 600 $HOME/.dbus/Xdbus
+ env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
+ eho 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+ Export XAUTHORITY value on startup so it can be used by cron
+ env | grep XAUTHORITY >> $HOME/.dbus/Xdbus
+ echo 'export XAUTHORITY' >> $HOME/.dbus/Xdbus
+ ```
 
 To be able use the exported information, it needs to be sourced inside crontab, before executing the battery warning script.
 
