@@ -1,9 +1,12 @@
 # Low battery warning notification script
-It is a bash script that checks the output of "acpi --battery", the battery percentage and if it is less than 26, 16 and 11% then a low/critical warning notifications is sent. The script does not exactly check for thee 25, 15 and 10% as it is invoked every 5 minutes and probably not pass the check. 
+It is a bash script that checks the output of "acpi --battery", the battery percentage and if it is less than 26, 16 and 11% then a low/critical warning notifications is sent. The script does not exactly check for thee 25, 15 and 10% as it is invoked every 5 minutes and probably not pass the check. The script also displays notification to disconnect charger when battery is charged up to or greater than 85%.
 
 ### Example screenshots
 The screenshots are just for example and not taken durring low battery status. Just for graphical representation. The script is customisable if you would like to change things.
 
+
+#### Disconnect charger notification when battery is charged up to 85% or greater.
+![Disconnect Battery Notification Batt charged >=85%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/cron_batter_warning_disconnect_charger.png)
 #### Low battery warning <26%
 ![Low Battery Warning <26%](https://github.com/KHZ-INTL/low_battery_notification_cron/blob/master/warning26.png)
 #### Low battery warning <16%
